@@ -1,0 +1,375 @@
+
+    /* CSS ЗМІННІ ТА СКИДАННЯ СТИЛІВ */
+    :root {
+      --bg-main: #f5f3ef;
+      --bg-card: #ffffff;
+      --bg-dark: #121212;
+      --accent: #d97706;
+      --accent-hover: #b45309;
+      --text-main: #18181b;
+      --text-muted: #6b7280;
+      --border-color: #e5e7eb;
+      --tag-green: #3f6212;
+      --tag-green-bg: #ecfdf5;
+      --radius-lg: 20px;
+      --radius-md: 12px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    /* ШАПКА ВЕБСАЙТУ (HEADER) */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: rgba(245, 243, 239, 0.9);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* HERO СЕКЦІЯ */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 40px 8% 80px;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 56px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .hero-text p {
+      color: var(--text-muted);
+      font-size: 16px;
+      max-width: 440px;
+      margin-bottom: 30px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .hero-images {
+      position: relative;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .hero-img-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-img-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* СЕКЦІЯ ИЗ ТЕКСТОМ / БЛОГ */
+    .info-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      padding: 60px 8%;
+      align-items: center;
+      background-color: #ffffff;
+    }
+
+    .info-text h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .info-text p {
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .quote-box {
+      border-left: 3px solid var(--accent);
+      padding-left: 20px;
+      font-style: italic;
+      color: var(--text-main);
+      font-weight: 500;
+      margin-top: 25px;
+    }
+
+    .info-img img {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    /* ТРЕНДОВА ГАЛЕРЕЯ (TREND GALLERY) */
+    .gallery-section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .product-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-img {
+      width: 100%;
+      height: 240px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #18181b;
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .product-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .product-price {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    /* ТАБЛИЦЯ EVOLUTION OF STYLE */
+    .table-section {
+      padding: 60px 8%;
+    }
+
+    .table-container {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      box-shadow: var(--shadow);
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th, td {
+      padding: 16px;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 14px;
+    }
+
+    th {
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .status-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .tag-trend { background: #fef3c7; color: #d97706; }
+    .tag-classic { background: #e0f2fe; color: #0369a1; }
+    .tag-emerging { background: #f3e8ff; color: #7e22ce; }
+
+    /* ФОРМА ПІДПИСКИ (JOIN THE MOVEMENT) */
+    .newsletter-section {
+      margin: 40px 8%;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .newsletter-text h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .newsletter-text p {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 12px;
+    }
+
+    .newsletter-form input {
+      padding: 14px 20px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      outline: none;
+      width: 280px;
+      font-family: inherit;
+    }
+
+    /* ПОП-АП (SECRET DROPS) */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      max-width: 320px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    .modal-card h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      margin-top: 15px;
+    }
+
+    .discount-badge {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent);
+      margin: 15px 0;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* АДАПТИВНІСТЬ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ */
+    @media (max-width: 768px) {
+      .hero, .info-section, .newsletter-section {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+      }
+      .newsletter-form {
+        width: 100%;
+        flex-direction: column;
+      }
+      .newsletter-form input {
+        width: 100%;
+      }
+      .hero-text h1 {
+        font-size: 38px;
+      }
+    }
+  
